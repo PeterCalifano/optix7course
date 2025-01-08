@@ -116,7 +116,7 @@ namespace osc {
       Model *model = loadOBJonly(
           // on linux, common practice is to have ONE level of build dir
           // (say, <project>/build/)...
-          "/home/peterc/devDir/nav-backend/simulationCodes/data/SPICE_kernels/Bennu/Bennu_v20_200k.obj"
+          "/home/peterc/devDir/nav-backend/simulationCodes/data/SPICE_kernels/Bennu_OREx/Bennu_v20_200k.obj"
       );
       Camera camera = { /*from*/vec3f(1.0f, 1.0f, 1.0f),
                         /* at */model->bounds.center(),
