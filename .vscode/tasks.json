@@ -1,0 +1,45 @@
+{
+    "tasks": [
+        {
+            "label": "adjustPath",
+            "type": "shell",
+            "command": "bash ${workspaceFolder}/.vscode/adjust_path_caller.sh ${workspaceFolder}/.vscode/adjust_path.py ${relativeFileDirname}",
+            "problemMatcher": [],
+        },
+        {
+            "label": "CCppmakeDEBUGbuild",
+            "type": "shell",
+            "command": "bash ${workspaceFolder}/.vscode/cmake_debug.sh ${fileDirname} ${fileBasenameNoExtension} ${relativeFileDirname}",
+            "detail": "CMake build task only for UNIX systems."
+        },
+        {
+            "label": "CCppmakeRELEASEbuild",
+            "type": "shell",
+            "command": "bash ${workspaceFolder}/.vscode/cmake_release.sh ${fileDirname} ${relativeFileDirname} ${fileBasenameNoExtension}",
+            "detail": "CMake build task only for UNIX systems."
+        },
+        {
+            "label": "AdjustPath_CmakeDebug",
+            "type": "shell",
+            "command": "bash ${workspaceFolder}/.vscode/cmake_debug.sh ${fileDirname} ${fileBasenameNoExtension} ${relativeFileDirname}",
+            "detail": "CMake build task only for UNIX systems.",
+            "dependsOn": [
+                "adjustPath"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "AdjustPath_CmakeBuild",
+            "type": "shell",
+            "command": "bash ${workspaceFolder}/.vscode/cmake_release.sh ${fileDirname} ${relativeFileDirname} ${fileBasenameNoExtension}",
+            "detail": "CMake build task only for UNIX systems.",
+            "dependsOn": [
+                "adjustPath"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}

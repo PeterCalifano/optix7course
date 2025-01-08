@@ -186,6 +186,8 @@ namespace osc {
       std::map<tinyobj::index_t, int> knownVertices;
       TriangleMesh *mesh = new TriangleMesh;
 
+      std::cout << "Number of faces: " << shape.mesh.num_face_vertices.size() << std::endl;
+      
       for (int faceID = 0; faceID < shape.mesh.num_face_vertices.size(); faceID++)
       {
         // Load the triangle vertices without checking material IDs
