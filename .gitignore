@@ -9,3 +9,5 @@ build
 Session.vim
 /models/*
 *.swp
+CMakeFiles/
+CMakeCache.txt
